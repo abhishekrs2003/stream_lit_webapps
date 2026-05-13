@@ -19,6 +19,7 @@
 
 #include <cstdint>
 #include <memory>
+#include <span>
 #include <vector>
 
 #include "arrow/result.h"
@@ -36,7 +37,7 @@ Result<std::shared_ptr<Buffer>> BitmapAllButOne(MemoryPool* pool, int64_t length
 
 /// \brief Convert vector of bytes to bitmap buffer
 ARROW_EXPORT
-Result<std::shared_ptr<Buffer>> BytesToBits(const std::vector<uint8_t>&,
+Result<std::shared_ptr<Buffer>> BytesToBits(std::span<const uint8_t> bytes,
                                             MemoryPool* pool = default_memory_pool());
 
 }  // namespace internal
