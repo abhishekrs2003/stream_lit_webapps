@@ -31,11 +31,11 @@ with open("scaler.pkl", "rb") as file:
     scaler = pickle.load(file)
 
 # Inputs
-beer_serv = st.number_input("Beer Servings", min_value=0.0)
+beer_serv = st.slider("Beer Servings", 0, 500, 50)
 
-spirit_serv = st.number_input("Spirit Servings", min_value=0.0)
+spirit_serv = st.slider("Spirit Servings", 0, 500, 50)
 
-wine_serv = st.number_input("Wine Servings", min_value=0.0)
+wine_serv = st.slider("Wine Servings", 0, 500, 50)
 
 
 
